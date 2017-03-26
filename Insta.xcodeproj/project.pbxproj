@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA09CB651E86A83700DC95E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09CB641E86A83700DC95E8 /* ProfileViewController.swift */; };
+		AA09CB6B1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09CB6A1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift */; };
+		AA31C1F61E87F08D00DE8057 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31C1F51E87F08D00DE8057 /* UploadViewController.swift */; };
+		AA31C1F81E87F0C300DE8057 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31C1F71E87F0C300DE8057 /* PhotoItem.swift */; };
 		AA49E2E41E7FB3730037415E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49E2E31E7FB3730037415E /* AppDelegate.swift */; };
 		AA49E2E91E7FB3730037415E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49E2E71E7FB3730037415E /* Main.storyboard */; };
 		AA49E2EC1E7FB3730037415E /* Insta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA49E2EA1E7FB3730037415E /* Insta.xcdatamodeld */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA09CB641E86A83700DC95E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AA09CB6A1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA31C1F51E87F08D00DE8057 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		AA31C1F71E87F0C300DE8057 /* PhotoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		AA49E2E01E7FB3730037415E /* Insta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49E2E31E7FB3730037415E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA49E2E81E7FB3730037415E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 		AA49E2E21E7FB3730037415E /* Insta */ = {
 			isa = PBXGroup;
 			children = (
+				AA09CB641E86A83700DC95E8 /* ProfileViewController.swift */,
+				AA31C1F51E87F08D00DE8057 /* UploadViewController.swift */,
+				AA31C1F71E87F0C300DE8057 /* PhotoItem.swift */,
+				AA09CB6A1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift */,
 				AA49E2E31E7FB3730037415E /* AppDelegate.swift */,
 				AA49E2E71E7FB3730037415E /* Main.storyboard */,
 				AA49E2ED1E7FB3730037415E /* Assets.xcassets */,
@@ -262,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA09CB651E86A83700DC95E8 /* ProfileViewController.swift in Sources */,
+				AA31C1F61E87F08D00DE8057 /* UploadViewController.swift in Sources */,
+				AA09CB6B1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift in Sources */,
 				AA49E2EC1E7FB3730037415E /* Insta.xcdatamodeld in Sources */,
 				AA49E2E41E7FB3730037415E /* AppDelegate.swift in Sources */,
+				AA31C1F81E87F0C300DE8057 /* PhotoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +530,7 @@
 				AA49E30D1E7FB3730037415E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA49E30E1E7FB3730037415E /* Build configuration list for PBXNativeTarget "InstaTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +539,7 @@
 				AA49E3101E7FB3730037415E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA49E3111E7FB3730037415E /* Build configuration list for PBXNativeTarget "InstaUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +548,7 @@
 				AA49E3131E7FB3730037415E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
