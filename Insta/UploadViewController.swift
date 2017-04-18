@@ -12,7 +12,7 @@ protocol UploadProtocol {
 	func reloadCollectionView(WithData data: PhotoItem)
 }
 
-class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
 	@IBOutlet var imageView: UIImageView!
 	@IBOutlet var captionField: UITextField!
@@ -23,6 +23,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		
+		self.captionField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +62,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 		self.dismiss(animated: true, completion: nil)
+	}
+
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		return self.captionField.resignFirstResponder()
 	}
 
     /*
