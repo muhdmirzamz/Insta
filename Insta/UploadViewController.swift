@@ -53,9 +53,12 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-		let image = info[UIImagePickerControllerOriginalImage] as? UIImage
 		
-		self.imageView.image = image
+		if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+			self.imageView.image = image
+		} else {
+			print("Something went wrong")
+		}
 		
 		self.dismiss(animated: true, completion: nil)
 	}

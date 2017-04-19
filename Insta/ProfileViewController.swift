@@ -16,11 +16,9 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 	
 	let itemsPerRow: CGFloat = 3
 	
-	// think of this as one section
-	// and the insets are basically the sides of it
-	// the insets are the length between the content and the edge
+	// think of insets as the padding to your div element in web dev
 	// http://stackoverflow.com/a/23794688
-	let sectionInsets = UIEdgeInsetsMake(50, 20, 50, 20)
+	let sectionInsets = UIEdgeInsetsMake(10, 10, 10, 10)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +27,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		
 		self.collectionView.dataSource = self
 		self.collectionView.delegate = self
+//		self.collectionView.backgroundColor = UIColor.blue
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +43,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PhotoCollectionViewCell
 
 		cell.imageView.image = self.photoItemArray[indexPath.row].image
+		cell.backgroundColor = UIColor.black
 		
 		return cell
 	}
@@ -52,22 +52,21 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		return 1
 	}
 	
-	func reloadCollectionView(WithData data: PhotoItem) {
+	func reloadCollectionView(WithData data: PhotoItem) {	
 		self.photoItemArray.append(data)
-		
+
 		self.collectionView.reloadData()
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		// 3 items per row
-		// counting the insets, there are 4 padding 
-		// basically count the spaces in between the items
-		// so take the left of the section inset and multiply it by the number of padding
-		let paddingSpace = self.sectionInsets.left * (self.itemsPerRow + 1)
-		let availableWidth = view.frame.width - paddingSpace
-		let widthPerItem = availableWidth / self.itemsPerRow
+		// the space between images is considered padding
+		// take that away from the main width 
+		// and you get the amount of available space for cells
+		let availableSpace = CGFloat(self.view.frame.width) - (self.sectionInsets.left * (self.itemsPerRow + 1))
+		let cellWidth = availableSpace / self.itemsPerRow
 		
-		return CGSize.init(width: widthPerItem, height: widthPerItem)
+	
+		return CGSize.init(width: cellWidth, height: cellWidth)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
