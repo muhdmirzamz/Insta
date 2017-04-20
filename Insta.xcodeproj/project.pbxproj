@@ -18,6 +18,9 @@
 		AA49E2F11E7FB3730037415E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49E2EF1E7FB3730037415E /* LaunchScreen.storyboard */; };
 		AA49E2FC1E7FB3730037415E /* InstaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49E2FB1E7FB3730037415E /* InstaTests.swift */; };
 		AA49E3071E7FB3730037415E /* InstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49E3061E7FB3730037415E /* InstaUITests.swift */; };
+		AAD9BEFA1EA88AD200CD2547 /* InstaTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9BEF91EA88AD200CD2547 /* InstaTabViewController.swift */; };
+		AAD9BEFC1EA88C8B00CD2547 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9BEFB1EA88C8B00CD2547 /* FeedTableViewController.swift */; };
+		AAD9BEFE1EA88D4800CD2547 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9BEFD1EA88D4800CD2547 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		AA49E3021E7FB3730037415E /* InstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49E3061E7FB3730037415E /* InstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaUITests.swift; sourceTree = "<group>"; };
 		AA49E3081E7FB3730037415E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD9BEF91EA88AD200CD2547 /* InstaTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaTabViewController.swift; sourceTree = "<group>"; };
+		AAD9BEFB1EA88C8B00CD2547 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		AAD9BEFD1EA88D4800CD2547 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				AA09CB641E86A83700DC95E8 /* ProfileViewController.swift */,
+				AAD9BEFB1EA88C8B00CD2547 /* FeedTableViewController.swift */,
+				AAD9BEFD1EA88D4800CD2547 /* FeedTableViewCell.swift */,
 				AA31C1F51E87F08D00DE8057 /* UploadViewController.swift */,
+				AAD9BEF91EA88AD200CD2547 /* InstaTabViewController.swift */,
 				AA31C1F71E87F0C300DE8057 /* PhotoItem.swift */,
 				AA09CB6A1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift */,
 				AA49E2E31E7FB3730037415E /* AppDelegate.swift */,
@@ -276,9 +285,12 @@
 			files = (
 				AA09CB651E86A83700DC95E8 /* ProfileViewController.swift in Sources */,
 				AA31C1F61E87F08D00DE8057 /* UploadViewController.swift in Sources */,
+				AAD9BEFA1EA88AD200CD2547 /* InstaTabViewController.swift in Sources */,
+				AAD9BEFC1EA88C8B00CD2547 /* FeedTableViewController.swift in Sources */,
 				AA09CB6B1E86AAE900DC95E8 /* PhotoCollectionViewCell.swift in Sources */,
 				AA49E2EC1E7FB3730037415E /* Insta.xcdatamodeld in Sources */,
 				AA49E2E41E7FB3730037415E /* AppDelegate.swift in Sources */,
+				AAD9BEFE1EA88D4800CD2547 /* FeedTableViewCell.swift in Sources */,
 				AA31C1F81E87F0C300DE8057 /* PhotoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

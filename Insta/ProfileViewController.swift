@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UploadProtocol {
 
 	@IBOutlet var collectionView: UICollectionView!
+	@IBOutlet var overlayView: UIView!
 	
 	var photoItemArray = [PhotoItem]()
 	
@@ -27,8 +28,17 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		
 		self.collectionView.dataSource = self
 		self.collectionView.delegate = self
-//		self.collectionView.backgroundColor = UIColor.blue
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		if self.photoItemArray.count == 0 {
+			self.collectionView.isHidden = true
+			self.overlayView.isHidden = false
+		} else {
+			self.collectionView.isHidden = false
+			self.overlayView.isHidden = true
+		}
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,6 +64,12 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 	
 	func reloadCollectionView(WithData data: PhotoItem) {	
 		self.photoItemArray.append(data)
+
+		// update tab bar array too
+		let instaTabVC = self.tabBarController as? InstaTabViewController
+		instaTabVC?.photoItemArray = self.photoItemArray
+		
+		print((instaTabVC?.photoItemArray.count)!)
 
 		self.collectionView.reloadData()
 	}

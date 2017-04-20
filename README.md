@@ -2,6 +2,10 @@
 
 An Instagram app clone to help me learn iOS
 
+20 April 2017
+- Feed is working properly
+- Profile will show a "No Posts" label if there is nothing to show
+
 19 April 2017
 - Image cells are now the right size
 - Button renamed to make sure user knows where to choose picture
